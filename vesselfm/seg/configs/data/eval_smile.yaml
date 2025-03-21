@@ -1,0 +1,7 @@
+defaults:
+  - default_finetune@SMILE
+  - _self_
+
+SMILE:
+  sample_prop: 1
+  path: /path/to/eval_set/SMILE #TODO
