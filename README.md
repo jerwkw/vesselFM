@@ -49,3 +49,5 @@ If you find our work useful for your research, please cite:
 
 ## 🟢 License
 Code in this repository is licensed under [GNU General Public License v3.0](LICENSE).
+
+Model weights are released under [Open RAIL++-M License](https://huggingface.co/bwittmann/vesselFM/blob/main/LICENSE) and are restricted to research and non-commercial use only.
