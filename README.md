@@ -1,4 +1,4 @@
-<img src="docs/vesselfm_banner.png">
+<img src="docs/vesselfm_banner_updated.png">
 
 **TL;DR**: VesselFM is a foundation model for universal 3D blood vessel segmentation. It is trained on three heterogeneous data sources: a large, curated annotated dataset, synthetic data generated through domain randomization, and data sampled from a flow matching-based deep generative model. These data sources provide enough diversity to enable vesselFM to achieve exceptional *zero*-shot blood vessel segmentation, even in completely unseen domains. For details, please refer to our preprint (https://arxiv.org/pdf/2411.17386).
 
