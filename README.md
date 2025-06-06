@@ -39,11 +39,13 @@ $\mathcal{D}_\text{real}$: Real data curated from 17 annotated blood vessel segm
 If you find our work useful for your research, please cite:
 
 ```bibtex
-@article{wittmann2024vesselfm,
-  title={vesselFM: A Foundation Model for Universal 3D Blood Vessel Segmentation},
-  author={Wittmann, Bastian and Wattenberg, Yannick and Amiranashvili, Tamaz and Shit, Suprosanna and Menze, Bjoern},
-  journal={arXiv preprint arXiv:2411.17386},
-  year={2024}
+@InProceedings{Wittmann_2025_CVPR,
+    author    = {Wittmann, Bastian and Wattenberg, Yannick and Amiranashvili, Tamaz and Shit, Suprosanna and Menze, Bjoern},
+    title     = {vesselFM: A Foundation Model for Universal 3D Blood Vessel Segmentation},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {20874-20884}
 }
 ```
 
