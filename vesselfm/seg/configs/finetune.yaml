@@ -1,17 +1,18 @@
 defaults:
   - train
-  - data: eval_smile
+  - override data: my_custom_data  # Override the data config from train.yaml
   - _self_
 
 num_shots: 0
 lr: 0.00001
 devices: [0]
 run_name: vesselfm
-path_to_chkpt: /path/to/pretrained_ckpt #TODO
-chkpt_folder:  /path/where/to/store/ckpts #TODO
+path_to_chkpt: /home/jeremy/.cache/huggingface/hub/models--bwittmann--vesselFM/snapshots/6c51f60d602f529eeb12002e85b56f517cd29bb9/vesselFM_base.pt #TODO
+chkpt_folder:  ./rsna_finetuned/ #TODO
 
 dataloader:
   shuffle: False
+  batch_size: 1
 
 trainer:
   lightning_trainer:

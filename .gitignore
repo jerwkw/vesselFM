@@ -12,3 +12,4 @@ runs
 ckpts
 outputs
 wandb
+data_splits

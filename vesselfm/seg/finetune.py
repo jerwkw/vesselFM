@@ -76,8 +76,25 @@ def main(cfg):
     # init model
     model = hydra.utils.instantiate(cfg.model)
     if cfg.path_to_chkpt is not None:
-        chkpt = torch.load(cfg.path_to_chkpt, map_location=f'cuda:{cfg.devices[0]}')
-        model_chkpt = {k.replace("model.", ""): e for k, e in chkpt["state_dict"].items() if "model" in k}
+        from pathlib import Path
+        chkpt_path = Path(cfg.path_to_chkpt).expanduser()
+        chkpt = torch.load(chkpt_path, map_location=f'cuda:{cfg.devices[0]}')
+        
+        # Handle different checkpoint formats
+        if isinstance(chkpt, dict):
+            if "state_dict" in chkpt:
+                # Lightning checkpoint format
+                model_chkpt = {k.replace("model.", ""): e for k, e in chkpt["state_dict"].items() if "model" in k}
+            elif "model" in chkpt:
+                # Checkpoint with 'model' key
+                model_chkpt = chkpt["model"]
+            else:
+                # Direct state dict
+                model_chkpt = chkpt
+        else:
+            # If chkpt is already a state dict
+            model_chkpt = chkpt
+        
         model.load_state_dict(model_chkpt)
 
     # init lightning module
