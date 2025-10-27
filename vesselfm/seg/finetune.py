@@ -60,7 +60,8 @@ def main(cfg):
 
     # init dataloader
     train_dataset = UnionDataset(cfg.data, "train", finetune=True)
-    train_dataset = Subset(train_dataset, range(cfg.num_shots))
+    actual_num_shots = min(cfg.num_shots, len(train_dataset))  # Cap to actual size
+    train_dataset = Subset(train_dataset, range(actual_num_shots))
     random_sampler = RandomSampler(train_dataset, replacement=True, num_samples=int(1e6))
     train_loader = hydra.utils.instantiate(cfg.dataloader)(dataset=train_dataset, sampler=random_sampler)
     logger.info(f"Train dataset size mapped to {len(train_dataset)} samples")

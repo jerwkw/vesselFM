@@ -13,6 +13,7 @@ chkpt_folder:  ./rsna_finetuned/ #TODO
 dataloader:
   shuffle: False
   batch_size: 3
+  num_workers: 4
 
 trainer:
   lightning_trainer:
