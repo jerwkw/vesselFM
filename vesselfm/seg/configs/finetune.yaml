@@ -7,7 +7,7 @@ num_shots: 0
 lr: 0.00001
 devices: [0]
 run_name: vesselfm
-path_to_chkpt: /home/jeremy/.cache/huggingface/hub/models--bwittmann--vesselFM/snapshots/6c51f60d602f529eeb12002e85b56f517cd29bb9/vesselFM_base.pt #TODO
+path_to_chkpt: /home/j/jerwkw/.cache/huggingface/hub/models--bwittmann--vesselFM/snapshots/6c51f60d602f529eeb12002e85b56f517cd29bb9/vesselFM_base.pt #TODO
 chkpt_folder:  ./rsna_finetuned/ #TODO
 
 dataloader:
