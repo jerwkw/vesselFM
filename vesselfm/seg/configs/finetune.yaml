@@ -3,7 +3,7 @@ defaults:
   - override data: my_custom_data  # Override the data config from train.yaml
   - _self_
 
-num_shots: 0
+num_shots: 999
 lr: 0.00001
 devices: [0]
 run_name: vesselfm
@@ -12,7 +12,7 @@ chkpt_folder:  ./rsna_finetuned/ #TODO
 
 dataloader:
   shuffle: False
-  batch_size: 1
+  batch_size: 3
 
 trainer:
   lightning_trainer:
